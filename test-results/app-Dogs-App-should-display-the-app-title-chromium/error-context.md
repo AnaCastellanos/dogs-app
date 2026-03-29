@@ -1,0 +1,68 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - generic [ref=e7]: 🐾
+        - heading "Dog Viewer" [level=1] [ref=e8]
+      - button "Refresh All" [ref=e9] [cursor=pointer]:
+        - img [ref=e10]
+        - text: Refresh All
+  - generic [ref=e15]:
+    - generic [ref=e16]:
+      - generic [ref=e18]:
+        - img "Labrador" [ref=e19]
+        - generic [ref=e21]:
+          - generic [ref=e22]:
+            - generic [ref=e23]: Breed
+            - heading "Labrador" [level=2] [ref=e24]
+          - button "Add to Favorites" [ref=e25] [cursor=pointer]:
+            - img [ref=e26]
+            - text: Add to Favorites
+      - generic [ref=e28]:
+        - heading "🐶 More Dogs" [level=3] [ref=e29]:
+          - generic [ref=e30]: 🐶
+          - text: More Dogs
+        - generic [ref=e31]:
+          - generic [ref=e32] [cursor=pointer]:
+            - img "Poodle" [ref=e33]
+            - paragraph [ref=e36]: Poodle
+          - generic [ref=e37] [cursor=pointer]:
+            - img "Poodle" [ref=e38]
+            - paragraph [ref=e41]: Poodle
+          - generic [ref=e42] [cursor=pointer]:
+            - img "Poodle" [ref=e43]
+            - paragraph [ref=e46]: Poodle
+          - generic [ref=e47] [cursor=pointer]:
+            - img "Poodle" [ref=e48]
+            - paragraph [ref=e51]: Poodle
+          - generic [ref=e52] [cursor=pointer]:
+            - img "Poodle" [ref=e53]
+            - paragraph [ref=e56]: Poodle
+          - generic [ref=e57] [cursor=pointer]:
+            - img "Poodle" [ref=e58]
+            - paragraph [ref=e61]: Poodle
+          - generic [ref=e62] [cursor=pointer]:
+            - img "Poodle" [ref=e63]
+            - paragraph [ref=e66]: Poodle
+          - generic [ref=e67] [cursor=pointer]:
+            - img "Poodle" [ref=e68]
+            - paragraph [ref=e71]: Poodle
+          - generic [ref=e72] [cursor=pointer]:
+            - img "Poodle" [ref=e73]
+            - paragraph [ref=e76]: Poodle
+          - generic [ref=e77] [cursor=pointer]:
+            - img "Poodle" [ref=e78]
+            - paragraph [ref=e81]: Poodle
+    - complementary [ref=e82]:
+      - generic [ref=e83]:
+        - generic [ref=e85]:
+          - img [ref=e86]
+          - heading "Favorites" [level=3] [ref=e88]
+        - generic [ref=e90]:
+          - img [ref=e91]
+          - paragraph [ref=e93]: No favorites yet
+          - paragraph [ref=e94]: Click "Add to Favorites" on any dog!
+```

@@ -36,23 +36,66 @@ ng build
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Running unit tests
+## Testing
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+### Unit tests
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+Unit tests use [Vitest](https://vitest.dev/) via the Angular build system and cover the `App` component and `DogService`. Run them with:
 
 ```bash
-ng e2e
+npm test
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+To run in watch mode (re-runs on file save):
+
+```bash
+npm test -- --watch
+```
+
+To generate a coverage report:
+
+```bash
+npm test -- --coverage
+```
+
+The spec files live alongside the source they test:
+
+| File | What it tests |
+|---|---|
+| `src/app/app.spec.ts` | `App` component — signals, favorites logic, thumbnail selection, refresh |
+| `src/app/dog.service.spec.ts` | `DogService` — HTTP requests, URL-to-breed parsing |
+
+### End-to-end tests
+
+E2E tests use [Playwright](https://playwright.dev/) with Chromium. They mock the dog.ceo API so runs are fast and deterministic.
+
+**First-time setup** — install the Playwright browser:
+
+```bash
+npx playwright install chromium
+```
+
+**Run the tests** — the dev server starts automatically:
+
+```bash
+npm run e2e
+```
+
+The dev server must not already be running when you execute this command (Playwright starts it for you). If you prefer to manage the server yourself, start it first with `npm start` and then run:
+
+```bash
+npm run e2e -- --ui
+```
+
+The `--ui` flag opens Playwright's interactive UI, which is useful for debugging individual tests.
+
+The test file lives in `e2e/app.spec.ts` and covers:
+
+- Page title and initial layout
+- Dog image loading and thumbnail grid
+- Adding, deduplicating, and removing favorites
+- Selecting a thumbnail as the main image
+- Refreshing all images
 
 ## Additional Resources
 
